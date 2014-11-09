@@ -1,0 +1,431 @@
+@import 'helpers';
+@import 'fonts';
+
+/* this is editable through the admin page */
+@import 'colors';
+
+/* placeholder */
+@phcolor: @c2;
+@phcolorfocus: @c7;
+@phfont: 'RobotoItalic';
+.ph-color(@phcolor);
+.ph-color-focus(@phcolorfocus);
+.ph-family(@phfont);
+
+/* This is to make phones happy. If we are doing a mobile version, uncomment the viewport tag in the layouts and remive this. */
+html,body{
+	min-width:320px;
+	overflow:auto;
+}
+
+*{
+	.sizing;
+	.robotol;
+	position: relative;
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	outline: 0 !important;
+}
+a{
+	text-decoration: none;
+	color:@c0;
+	.roboto;
+	outline: 0 !important;
+}
+a:hover{
+	text-decoration: underline;
+}
+b{
+	.robotob;
+	letter-spacing:1px;
+}
+html{
+	height: 100%;
+	position:relative;
+}
+
+div{
+	overflow:auto;
+}
+
+h1,h2,h3,h4,h5{
+	margin-top:0;
+	margin-bottom:8px;
+}
+hr{
+	border-left:0;
+	border-top:0;
+	margin:8px 0 4px;
+}
+td{
+	background-clip: padding-box;
+}
+p{
+	margin:4px 0;
+}
+
+body{
+	color: @c2;
+	min-height: 100%;
+	position:relative;
+}
+
+/* blog */
+.blog-title{
+	.c(@c4);
+}
+.blog-time{
+	.iblock;
+	float:right;
+	color: @c2;
+	.robotoli;
+	font-size:16px;
+	.padt(4px);
+}
+.blog-wrap{
+	.pad(10px);
+}
+.blog-content{
+}
+
+/* sitemap */
+.sitemap{
+	h1,h2,h3,h4,h5,h6{
+		margin:4px 0;
+		.iblock;
+	}
+}
+
+/* contact form */
+#contact-form{
+	* *{
+		position:static;
+	}
+	h1{
+		margin: 0px 0;
+	}
+	h2{
+		color:@c1;
+		margin: 4px 0;
+		font-size:24px;
+	}
+	input[type='text'],
+	select,
+	textarea,
+	.customSelect{
+		.iblock;
+		.w100pc;
+		max-width:100%;
+		background: @c8;
+		.round(0);
+		.pad(10px 10px);
+		.align-left;
+		height:30px;
+	}
+	input[type="text"]{
+		.pad(2px 10px);
+	}
+	input[type='submit']{
+		.iblock;
+		.w100pc;
+		color: @c8;
+		background:@c4;
+		.roboto;
+		max-width:100%;
+		.round(0);
+		.f18;
+		letter-spacing: 1px;
+		border: 1px solid @c4;
+		height:40px;
+	}
+	input[type='submit']:hover{
+		color:@c2;
+	}
+	textarea{
+		height:108px;
+		margin-bottom:4px;
+		padding-top:4px;
+	}
+	textarea.tall{
+		height:206px;
+	}
+	.customSelect { 
+		.pad(4px 10px);
+	}
+}
+
+/* Important elements (main wrappers, footers, headers) */
+.content-wrap{
+	.pad(20px);
+	.wmax(960px);
+	.mar(0 auto);
+	h3{
+		.c(@c4);
+		.mar(20px 0 0 0);
+	}
+}
+div#content-wrap{
+	.pad(20px);
+}
+@topbar-height: 74px; 
+#topbar{
+	height:@topbar-height;
+	.mar(0);
+	.pad(0 10px);
+	.visible;
+	background: @c0;
+	line-height:0px !important;
+	letter-spacing: -3px;
+	.w100pc;
+	border-bottom: 5px solid @c4;
+	min-width:320px;
+	a{
+		letter-spacing: 0px;
+		.iblock;
+		height:0px;
+		line-height:0px;
+		.pad(@topbar-height/2 2%);
+		.mar(0px);
+		.c(@c8);
+		img{
+			.padt(2px);
+			height:65px;
+		}
+		float:right;
+	}
+	a:hover,
+	a.active{
+		color: @c4;
+		text-decoration:none;
+	}
+	a:first-child{
+		.pad(0);
+		height:@topbar-height;
+		float:left;
+	}
+}
+#footer{
+	background: @c0;
+	color: @c8;
+	position:absolute;
+	bottom:0px;
+	width:100%;
+	font-size:16px;
+	a{
+		color: @c8;
+		&:hover,
+		&.active{
+			color: @c4;
+			text-decoration:none;
+		}
+	}
+	.pad(0 20px);
+	.align-center;
+	.hidden;
+	hr{
+		.mar(0);
+	}
+	a{
+		.block;
+		.pad(20px 0);
+	}
+
+	a.w100pc{
+		.pad(10px 0);
+	}
+}
+#seo{
+	height:1px; 
+	position:absolute;
+	top:-1px;
+	overflow:hidden;
+}
+.notifications,
+.errors{
+	max-width:800px;
+	.mar(10px auto);
+	background: @c7;
+	color:@c2;
+	.pad(20px);
+	.align-center;
+	.round(5);
+}
+.errors{
+	background: @c4;
+	color: @c8;
+}
+
+/* Forms and Fields */
+input,
+button,
+select,
+textarea,
+.customSelect {
+	.bg(@c7);
+	.round(4px);
+	border:1px solid @c0;
+	height:30px;
+	width:90%;
+/*	max-width:300px; */
+	margin-bottom:4px;
+	text-align:center;
+	color: black;
+	.roboto;
+	.f16;
+	&:focus{
+		.bg(@c8);
+	}
+}
+textarea{
+	height:100px;
+}
+input[type="submit"],
+input[type="button"],
+button{
+	background: @c7;
+	color: @c0;
+	border: 1px solid @c0;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover{
+	/*
+	background: @c0;
+	color:@c8;
+	border-color:@c0;
+	*/
+	.c(@c0);
+	.bg(@c8);
+}
+input[type="text"]{
+	.pad(0 8px);
+}
+input[type="textarea"]{
+	.pad(4px 8px);
+}
+select{ .pad(4px 4px); }
+select.placeholder{ .pad(0 4px); }
+
+/* custom selects... */
+.customSelect { 
+	.pad(4px 10px);
+}
+.customSelect.customSelectHover {
+}
+.customSelect.customSelectOpen {
+}
+.customSelect.customSelectFocus {
+}
+.customSelect.customSelectDisabledOption {
+}
+.customSelect.customSelectDisabled {
+}
+.customSelectInner {
+	color: @phcolor;
+	font-family: @phfont;
+	.f16;
+}	
+.customSelectInner.good {
+	color: black;
+	.roboto;
+}
+.select-wrap{
+	 margin-bottom:30px;
+	 .visible;
+	 position:relative !important;
+	 height:4px;
+}	
+.select-arrow{
+	position:absolute !important;
+	top:3px;
+	right:10px;
+	color: @c1;
+	pointer-events:none;
+}
+select{
+}
+
+.overlay-bg{
+	position:fixed;
+	top:0px;
+	left:0px;
+	height:100%;
+	width:100%;
+	background: @c0;
+	opacity:0.5;
+	display:none;
+}
+.overlay-loading{
+	position:fixed;
+	top:50%;
+	left:50%;
+	margin-top:-16px;
+	margin-left:-16px;
+	display:none;
+}
+
+.center-wrap{
+	max-width:720px;
+	margin:0 auto;
+	min-width:320px;
+}
+
+/* fixing our plugins */
+.chosen-single{
+	height:30px !important;
+	.block !important;
+	font-size:18px;
+	span{
+		line-height:26px !important;
+	}
+}
+.chosen-container{
+	.visible;
+	.align-left;
+	a span{
+		line-height:30px;
+		.align-center;
+	}
+}
+.chosen-search{
+	.visible;
+	input{
+		max-width:1000000px;
+	}
+}
+.projekktor *{
+	.visible;
+}
+.mce-close{
+	background:@c8 !important;
+}
+
+.mce-btn button{
+	height:28px !important;
+	overflow:visible !important;
+}
+
+textarea.mce-textbox{
+	max-width: 95%;
+}
+.mce-window{
+	.visible;
+}
+.ui-tabs .ui-tabs-panel{
+	.pad(0);
+}
+.ui-accordion .ui-accordion-content{
+	.pad(10px);
+}
+.ui-tabs{
+	.ui-tabs-nav{
+		.marb(4px);
+		li a{
+			.pad(4px 8px);
+		}
+	}
+}
+.ui-tooltip{
+	.visible;
+	.ui-tooltip-content{ .visible; }
+}

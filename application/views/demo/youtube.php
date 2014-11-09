@@ -1,0 +1,1 @@
+<iframe width="560" height="315" src="//www.youtube.com/embed/videoseries?list=PLPeCC7ZFmvQoKB75Uyym2pZoCgAb4YsbG&loop=1&autoplay=1&index=<?= rand(1,50) ?>&shuffle=1" frameborder="0" allowfullscreen></iframe>

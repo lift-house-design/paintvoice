@@ -1,0 +1,12 @@
+### Set Up a simple LAMP server ###
+apt-get install tasksel
+tasksel install lamp-server
+apt-get install php-apc
+apt-get install git
+apt-get install sendmail
+apt-get install node-less yui-compressor
+a2enmod expires
+a2enmod rewrite
+# enable short tags in /etc/php5/apache2/php.ini
+# add a .conf file in /etc/apache2/sites-enabled
+

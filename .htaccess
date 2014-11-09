@@ -1,0 +1,35 @@
+RewriteEngine on
+RewriteBase /
+
+###########################################
+
+# redirext www to non-www
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=302,L]
+
+###########################################
+
+# Use SSL always
+#RewriteCond %{HTTPS} !=on
+#RewriteCond %{HTTP_HOST} !^local
+#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R]
+
+############################################
+
+# Favicon
+RewriteRule ^favicon.ico$ /assets/favicons/favicon.ico [L]
+
+############################################
+
+# Codeigniter Stuff
+RewriteCond %{REQUEST_URI} !^\/(favicon\.ico|index\.php|assets|min)
+RewriteRule ^(.*)$ /index.php/$1 [L]
+
+
+# subdir example (/~pbeach/)
+#RewriteCond %{REQUEST_URI} ^\/\~pbeach
+#RewriteCond %{REQUEST_URI} !^\/\~pbeach\/(favicon\.ico|index\.php|assets|min)
+#RewriteRule ^(.*)$ /~pbeach/index.php/$1 [L,R=302]
+#RewriteCond %{REQUEST_URI} !^\/\~pbeach
+#RewriteCond %{REQUEST_URI} !^\/(\~pbeach|favicon\.ico|index\.php|assets|min)
+#RewriteRule ^(.*)$ /index.php/$1 [L]

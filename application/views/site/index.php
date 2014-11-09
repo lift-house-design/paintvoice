@@ -1,0 +1,1 @@
+<?= get_instance()->_parse_content($content_home) ?>

@@ -1,0 +1,48 @@
+@import 'application';
+
+input.full{
+	width:100%;
+	.iblock;
+	max-width:100%;
+	margin-top:4px;
+}
+
+table.full{
+	width:100%;
+}
+
+table.striped{
+	tr:nth-child(even){
+		td{
+		}
+	}
+	tr:nth-child(odd){
+		td{
+			.bg(@c7);
+		}
+	}
+}
+table.padded{
+	tr{
+		td{ .pad(8px); }
+	}
+}
+
+iframe.clear{
+	border:0;
+	width:99.9%;
+	height:100%;
+	min-height:700px;
+}
+
+#website-config{
+	input[type="text"]{
+		margin:0;
+	}
+}
+
+div.color-test{
+	width:30px;
+	height:30px;
+	border: 1px solid black;
+}

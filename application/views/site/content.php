@@ -1,0 +1,1 @@
+<div class="content"><?= get_instance()->_parse_content($content) ?></div>

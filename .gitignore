@@ -1,0 +1,15 @@
+# Junk operating system files
+.DS_Store
+Thumbs.db
+
+# Sass cache directories
+.sass-cache
+
+#CodeIgniter files
+application/cache/*
+!application/cache/index.html
+!application/cache/.htaccess
+
+application/logs/*
+!application/logs/index.html
+!application/logs/.htaccess

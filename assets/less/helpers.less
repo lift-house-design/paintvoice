@@ -1,0 +1,282 @@
+/* margin/padding functions */
+.mar(@px: 10){
+	margin: @px;
+}
+.marb(@px: 10){
+	margin-bottom: @px;
+}
+.mart(@px: 10){
+	margin-top: @px;
+}
+.marl(@px: 10){
+	margin-left: @px;
+}
+.marr(@px: 10){
+	margin-right: @px;
+}
+.pad(@px: 10){
+	padding: @px;
+}
+.padb(@px: 10){
+	padding-bottom: @px;
+}
+.padt(@px: 10){
+	padding-top: @px;
+}
+.padl(@px: 10){
+	padding-left: @px;
+}
+.padr(@px: 10){
+	padding-right: @px;
+}
+
+/* spacers */
+@iterations: 200;
+.mixin-loop (@index) when (@index > -1) {
+	@val: @index ;
+	.spacer@{val}{
+		height: @val * 1px;
+  	}
+	.spacerv@{val}{
+		width: @val * 1px;
+		height:1px
+  	}
+	.mixin-loop(@index - 1);
+}
+.mixin-loop (-1) {}
+.mixin-loop(@iterations);
+
+/* padding */
+@paditerations: 20;
+.pad-loop (@index) when (@index > -1) {
+	@val: @index * 2;
+	.pad@{val}{
+		.pad(@val * 1px);
+  	}
+	.pad@{val}t{
+		.padt(@val * 1px);
+  	}
+	.pad@{val}b{
+		.padb(@val * 1px);
+  	}
+	.pad@{val}r{
+		.padr(@val * 1px);
+  	}
+	.pad@{val}l{
+		.padl(@val * 1px);
+  	}
+	.pad-loop(@index - 1);
+}
+.pad-loop (-1) {}
+.pad-loop(@paditerations);
+
+/* margins */
+@mariterations: 20;
+.mar-loop (@index) when (@index > -1) {
+	@val: @index * 2;
+	.mar@{val}{
+		.mar(@val * 1px);
+  	}
+	.mar@{val}t{
+		.mart(@val * 1px);
+  	}
+	.mar@{val}b{
+		.marb(@val * 1px);
+  	}
+	.mar@{val}r{
+		.marr(@val * 1px);
+  	}
+	.mar@{val}l{
+		.marl(@val * 1px);
+  	}
+	.mar-loop(@index - 1);
+}
+.mar-loop (-1) {}
+.mar-loop(@mariterations);
+
+/* silly stuff */
+.round (@r: 5) {
+	@radius: @r * 1px;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+.shadow (@c: rgba(0,0,0,.6)){
+	-webkit-box-shadow: 2px 2px 4px 0 @c;
+	box-shadow: 2px 2px 4px 0 @c;
+}
+
+/* placeholders */
+.ph-color(@c: black)
+{
+	select.placeholder{ color: @c; }
+	option:first-child{ color: @c; }
+	::-webkit-input-placeholder{ color: @c; }
+	:-moz-placeholder{ color: @c; }
+	::-moz-placeholder{ color: @c; }
+	:-ms-input-placeholder { color: @c; }
+}
+.ph-color-focus(@c: black)
+{
+	:focus::-webkit-input-placeholder { color: @c; }
+	:focus:-moz-placeholder { color: @c; }
+	:focus::-moz-placeholder { color: @c; }
+	:focus:-ms-input-placeholder { color: @c; }
+}
+.ph-family(@f: Lato)
+{
+	select.placeholder{ font-family: @f; }
+	option:first-child{ font-family: @f; }
+	::-webkit-input-placeholder{ font-family: @f; }
+	:-moz-placeholder{ font-family: @f; }
+	::-moz-placeholder{ font-family: @f; }
+	:-ms-input-placeholder { font-family: @f; }
+}
+/*
+::-webkit-input-placeholder {
+   color: @phcolor;
+   font-family: @phfont;
+}
+:-moz-placeholder {
+   color: @phcolor;  
+   font-family: @phfont;
+}
+::-moz-placeholder {
+   color: @phcolor;  
+   font-family: @phfont;
+}
+:-ms-input-placeholder {  
+   color: @phcolor;  
+   font-family: @phfont;
+}
+*/
+
+/* sizing */
+.sizing(@s: border-box){
+	-webkit-box-sizing: @s;
+	-moz-box-sizing: @s;
+	box-sizing: @s;
+}
+.w(@width: 960px){
+	width: @width;
+}
+.h(@height: 10px){
+	height: @height;
+}
+.wmax(@w: 960px){
+	max-width: @w;
+}
+.wmin(@w: 320px){
+	min-width: @w;
+}
+.w300{
+	width: 300px;
+}
+.w20pc{
+	width: 19.999999%;
+	float:left;
+}
+.w25pc{
+	width: 24.999999%;
+	float:left;
+}
+.w33pc{
+	width: 33.333333%;
+	float:left;
+}
+.w37pc{
+	width: 36.999999%;
+	float:left;
+}
+.w40pc{
+	width: 39.999999%;
+	float:left;
+}
+.w45pc{
+	width: 44.999999%;
+	float:left;
+}
+.w49pc{
+	width: 48.999999%;
+	float:left;
+}
+.w50pc{
+	width: 49.999999%;
+	float:left;
+}
+.w60pc{
+	width: 59.999999%;
+	float:left;
+}
+.w63pc{
+	width: 62.999999%;
+	float:left;
+}
+.w66pc{
+	width: 66.666666%;
+	float:left;
+}
+.w75pc{
+	width: 74.999999%;
+	float:left;
+}
+.w80pc{
+	width: 79.999999%;
+	float:left;
+}
+.w100pc{
+	width: 99.999999%;
+	float:left;
+}
+.center540{
+	margin:0 auto;
+	max-width:540px;
+}
+
+/* formatting */
+.align-center{
+	text-align:center;
+}
+.align-left{
+	text-align:left;
+}
+.align-right{
+	text-align:right;
+}
+.block{
+	display:block;
+}
+.iblock{
+	display:inline-block;
+}
+.inline{
+	display:inline;
+}
+.hide{
+	display:none;
+}
+.pull-right{
+	display:inline-block;
+	float:right;
+}
+.pull-center{
+	display:inline-block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.hidden{
+	overflow: hidden;
+}
+.visible{
+	overflow:visible;
+}
+
+/* colors */
+.bg(@c: #fff){
+	background-color: @c;
+}
+.c(@c: #fff){
+	color: @c;
+}
