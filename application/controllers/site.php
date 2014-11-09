@@ -29,9 +29,6 @@ class Site extends App_Controller
 
 	public function index()
 	{
-		// Why?
-		$this->contact();
-
 		$this->asides['contact'] = 'asides/contact';
 		$this->data['content_home'] = $this->content->get('homepage');
 		$this->data['blogs'] = $this->blog->recent(0,5);

@@ -5,7 +5,7 @@
 <?php endif; ?>
 
     <div class="wrapper">
-        <a class="logo" href="/"><img src="<?php echo asset('img/layout/logo-sm.png') ?>" alt="<?php echo $app_title ?>" title="<?php echo $app_title ?>" /></a>
+        <a class="logo" href="/"><?php echo $app_title ?></a>
         <a class="show-menu hide-on-desktop"><img src="<?php echo asset('img/layout/mobile-nav.png') ?>" alt="Show Menu" title="Show Menu" /></a>
         <?php echo navigation_menu($nav_data,array('class'=>'nav')) ?>
     </div>

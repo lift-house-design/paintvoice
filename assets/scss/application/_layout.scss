@@ -82,11 +82,15 @@ nav#layout-nav {
     .logo {
         position: absolute;
         left: 0;
-        top: 7px;
+        top: 0;
+        line-height: $nav-height;
+        color: $white;
+        font-size: 42px;
+        font-family: 'Lobster Two',italic;
+        font-style: italic;
 
-        img {
-            width: 60px;
-            height: 58px;
+        &:hover {
+            text-decoration: none;
         }
     }
 
@@ -98,7 +102,7 @@ nav#layout-nav {
         top: 0;
         right: 0;
         bottom: 0;
-        left: 70px;
+        left: 140px;
         text-align: right;
         z-index: 1;
         // Reset base ul styles

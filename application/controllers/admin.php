@@ -80,6 +80,11 @@ class Admin extends App_Controller {
         $this->data['social_media'] = $this->configuration->get_social_media();
     }
 
+    public function homepage_image()
+    {
+        
+    }
+
     public function blog() {
         $this->layout = 'blank';
         $this->authenticate = 'blogger';

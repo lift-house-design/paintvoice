@@ -27,7 +27,7 @@ $config['base_url'] = 'http://tagtown/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = '';
+$config['index_page'] = 'index.php';
 
 /*
 |--------------------------------------------------------------------------

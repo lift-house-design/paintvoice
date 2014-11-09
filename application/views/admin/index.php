@@ -25,13 +25,13 @@
 				<? foreach($colors as $i => $v){ ?>
 					<tr>
 						<td>
-							<a href="javascript:void(0)" title="Make sure these are valid CSS colors. You may need to refresh the home page to see your changes."><b>Color <?= $i ?></b></a>
+							<a href="javascript:void(0)" title="Make sure these are valid CSS colors. You may need to refresh the home page to see your changes."><b><?= ucwords(str_replace('_',' ',$i)) ?></b></a>
 						</td>
 						<td>
 							<div class="color-test" id="color-test-<?= $i ?>" style="background-color:<?= $v ?>"></div>
 						</td>
 						<td>
-							<input type="text" onkeyup="test_color(<?= $i ?>)" onpaste="test_color(<?= $i ?>)" class="full" name="color-<?= $i ?>" value="<?= $v ?>" placeholder="#2f8faa" type="text"/>
+							<input type="text" onkeyup="test_color(<?= $i ?>)" onpaste="test_color(<?= $i ?>)" class="full" name="<?= $i ?>" value="<?= $v ?>" placeholder="#2f8faa" type="text"/>
 						</td>
 					</tr>
 				<? } ?>
@@ -156,5 +156,6 @@
 	</div>
 </div>
 <h3> <a href="/admin/gallery">Manage Gallery</a> </h3>
+<h3> <a href="/admin/homepage_image">Manage Homepage Image</a> </h3>
 <div class="spacer20"></div>
 

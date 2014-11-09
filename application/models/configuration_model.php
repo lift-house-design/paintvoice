@@ -48,28 +48,53 @@ class Configuration_model extends App_Model
         config_merge('social_media', $social_media);
 	}
 
+	// public function get_colors()
+	// {
+	// 	$colors = [];
+	// 	$file = file(__DIR__.'/../../assets/less/colors.less', FILE_SKIP_EMPTY_LINES|FILE_IGNORE_NEW_LINES);
+	// 	foreach($file as $f)
+	// 	{
+	// 		if(preg_match('/\@c(\d+)\:\s*([^;]+)/',$f,$match))
+	// 			$colors[$match[1]] = $match[2];
+	// 	}
+	// 	return $colors;
+	// }
+	
 	public function get_colors()
 	{
-		$colors = [];
-		$file = file(__DIR__.'/../../assets/less/colors.less', FILE_SKIP_EMPTY_LINES|FILE_IGNORE_NEW_LINES);
-		foreach($file as $f)
+		$colors=array();
+
+		$file=file_get_contents('assets/scss/includes/_theme.scss');
+		preg_match_all('/\$([-\w]+-color):\s*(#[0-9a-fA-F]+);/',$file,$matches);
+
+		for($i=0;$i<count($matches[0]);$i++)
 		{
-			if(preg_match('/\@c(\d+)\:\s*([^;]+)/',$f,$match))
-				$colors[$match[1]] = $match[2];
+			$color_key=str_replace('-','_',$matches[1][$i]);
+			$color_value=$matches[2][$i];
+
+			$colors[ $color_key ] = $color_value;
 		}
+		
 		return $colors;
 	}
 
+	// public function set_colors($data)
+	// {
+	// 	$file = '';
+	// 	foreach($data as $i => $v)
+	// 	{
+	// 		list($tmp, $i) = explode('-', $i);
+	// 		$file .= '@c'.$i.': '.$v.";\n";
+	// 	}
+	// 	file_put_contents(__DIR__.'/../../assets/less/colors.less', $file);
+	// 	exec('bash '.__DIR__.'/../../dev/deploy.sh', $out);
+	// }
+
 	public function set_colors($data)
 	{
-		$file = '';
-		foreach($data as $i => $v)
-		{
-			list($tmp, $i) = explode('-', $i);
-			$file .= '@c'.$i.': '.$v.";\n";
-		}
-		file_put_contents(__DIR__.'/../../assets/less/colors.less', $file);
-		exec('bash '.__DIR__.'/../../dev/deploy.sh', $out);
+		$file=$this->load->view('admin/asides/_theme.scss.php',$data,TRUE);
+		file_put_contents('assets/scss/includes/_theme.scss',$file);
+		exec('sass --no-cache assets/scss/application.scss assets/css/application.css');
 	}
 
 	public function get_social_media()

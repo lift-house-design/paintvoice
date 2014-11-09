@@ -53,10 +53,10 @@ $config['module_path'] = APPPATH.'modules';
 
 /* Metadata/SEO */
 $config['meta'] = array(
-    'site_name' => 'Tag Town',
-    'title' => "Tag Town",
-    'description' => "Tag Town",
-    'keywords' =>'Tag Town',
+    'site_name' => 'TagTown',
+    'title' => "TagTown",
+    'description' => "TagTown",
+    'keywords' =>'TagTown',
     'url' => $config['full_path'],
     'image' => '/assets/img/logo.png'
 );
@@ -81,7 +81,7 @@ $config['social_media'] = array(
 $config['contact_recipient'] = '';
 $config['email_notifications']=array(
     'sender_email'=>'no-reply@tagtown.org',
-    'sender_name'=>'Tag Town',
+    'sender_name'=>'TagTown',
     'config'=>array(
         'protocol'=>'sendmail',
         'mailtype'=>'html',

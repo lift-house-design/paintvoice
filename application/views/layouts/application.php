@@ -7,7 +7,6 @@
     <div class="sticky-footer-wrapper">
         <?php if($is_homepage): ?>
             <div id="homepage-intro" class="parallax-img-container">
-                <img class="logo" src="<?php echo asset('img/layout/logo-lg.png') ?>" alt="<?php echo $app_title ?>" title="<?php echo $app_title ?>" />
                 <div class="parallax-img" data-anchor-target="#homepage-intro" data-top-bottom="transform:translateY(30%)" data-top="transform:translateY(-30%)"></div>
             </div>
         <?php elseif(asset_exists($page_header)): ?>

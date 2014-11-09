@@ -67,31 +67,7 @@ $container-max-width: 980px;
 --------------------------------------------------
 */
 
-/* Main Colors */
-$primary-color: #3B4E65; // Dark/royal blue
-$secondary-color: #B5ACA0; // Lighter gray
-$tertiary-color: green;
-
-/* Navigation */
-$nav-height: 70px;
-$nav-item-spacing: 40px;
-
-$nav-bg-color: $primary-color;
-$nav-border-size: 5px;
-$nav-border-color: $secondary-color;
-
-$nav-submenu-width: 200px;
-$nav-submenu-height: 36px;
-$nav-submenu-bg-color: $nav-bg-color;
-$nav-submenu-border-size: 2px;
-$nav-submenu-border-color: $nav-border-color;
-
-/* Footer */
-$footer-height: 180px;
-$footer-bg-color: $primary-color;
-
-/* Main */
-$content-vertical-spacing: 20px;
+@import 'theme';
 
 
 /*
