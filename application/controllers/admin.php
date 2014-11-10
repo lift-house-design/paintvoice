@@ -82,7 +82,70 @@ class Admin extends App_Controller {
 
     public function homepage_image()
     {
-        
+        $successful_upload=FALSE;
+
+        if($this->input->post())
+        {
+            $this->load->library('form_validation');
+            $this->load->library('upload',array(
+                'upload_path'=>'assets/img/layout',
+                'file_name'=>'homepage-intro.png',
+                'overwrite'=>TRUE,
+                'allowed_types'=>'jpg|jpeg|bmp|gif|png',
+            ));
+
+            $successful_upload=$this->upload->do_upload('image');
+
+            //$uploaded_image_data=$this->upload->data();
+
+            // if($uploaded_image_data['is_image']!=1)
+            // {
+            //     $this->form_validation->set_error('The uploaded file must be an image.');
+            // }
+
+            // if($uploaded_image_data['image_width']<1200)
+            // {
+            //     $this->form_validation->set_error('The uploaded image must be at least 1200px wide.');
+            // }
+
+            // if($uploaded_image_data['image_height']<900)
+            // {
+            //     $this->form_validation->set_error('The uploaded image must be at least 900px tall.');
+            // }
+
+            // // If there are no errors
+            // if($this->upload->do_upload('image') && count($this->form_validation->get_errors())==0)
+            // {
+            //     $image_lib_config=array(
+            //         'source_image'=>'assets/img/layout/homepage-intro_tmp.png',
+            //         'new_image'=>'assets/img/layout/homepage-intro_tmp2.png',
+            //     );
+
+            //     $use_y=FALSE;
+            //     $w=$uploaded_image_data['image_width'];
+            //     $h=$uploaded_image_data['image_height'];
+            //     $ratio=$h/$w;
+
+            //     if($ratio<.75)
+            //     {
+            //         $use_y=TRUE;
+            //     }
+
+            //     if($use_y)
+            //     {
+            //         $image_lib_config['height']=900;
+            //     }
+            //     else
+            //     {
+            //         $image_lib_config['width']=1200;
+            //     }
+
+            //     $this->load->library('image_lib',$image_lib_config);
+            //     $this->image_lib->resize();
+            // }
+        }
+
+        $this->data['successful_upload']=$successful_upload;
     }
 
     public function blog() {

@@ -340,13 +340,13 @@ h1, h2, h3, h4 {
   margin-top: 20px; }
 
 h1, h2 {
-  color: #3B4E65; }
+  color: #3b4e65; }
 
 h2, h3 {
   font-size: 1.6em; }
 
 h3, h4 {
-  color: #B5ACA0;
+  color: #b5aca0;
   margin-top: 15px; }
 
 h5, h6 {
@@ -362,10 +362,10 @@ h4 {
   font-size: 1.4em; }
 
 h5 {
-  color: #3B4E65; }
+  color: #3b4e65; }
 
 h6 {
-  color: #B5ACA0; }
+  color: #b5aca0; }
 
 /*
 --------------------------------------------------
@@ -396,7 +396,7 @@ ul {
 a {
   font-weight: normal;
   text-decoration: none;
-  color: #3B4E65; }
+  color: #3b4e65; }
   a:hover {
     text-decoration: underline; }
   a.button:hover {
@@ -413,24 +413,24 @@ p {
 input[type="text"],
 input[type="password"],
 textarea {
-  background-color: #fff;
+  background-color: white;
   color: #1a1a1a;
   padding: 4px 8px;
-  border: 1px solid #3B4E65;
+  border: 1px solid #3b4e65;
   font-family: inherit; }
   input[type="text"]:focus,
   input[type="password"]:focus,
   textarea:focus {
     outline: 0;
-    border-color: #B5ACA0; }
+    border-color: #b5aca0; }
 
 input[type="submit"],
 input[type="button"],
 input[type="reset"],
 .button {
   border: 0;
-  background-color: #3B4E65;
-  color: #fff;
+  background-color: #3b4e65;
+  color: white;
   padding: 8px 16px;
   text-transform: uppercase;
   cursor: pointer; }
@@ -448,7 +448,7 @@ input[type="reset"],
 label {
   font-size: .8em;
   text-transform: uppercase;
-  color: #B5ACA0;
+  color: #b5aca0;
   font-weight: normal; }
 
 /*
@@ -1696,7 +1696,7 @@ footer#layout-footer .links {
 --------------------------------------------------
 */
 .primary-color {
-  color: #3B4E65; }
+  color: #3b4e65; }
 
 /*
 --------------------------------------------------
@@ -1754,8 +1754,8 @@ main#layout-content {
 --------------------------------------------------
 */
 nav#layout-nav {
-  background-color: #3B4E65;
-  border-bottom: 5px solid #B5ACA0;
+  background-color: #3b4e65;
+  border-bottom: 5px solid #b5aca0;
   margin-bottom: -75px;
   z-index: 1;
   /*
@@ -1776,7 +1776,7 @@ nav#layout-nav {
     left: 0;
     top: 0;
     line-height: 70px;
-    color: #fff;
+    color: white;
     font-size: 42px;
     font-family: 'Lobster Two',italic;
     font-style: italic; }
@@ -1804,7 +1804,7 @@ nav#layout-nav {
     nav#layout-nav ul.nav li {
       margin: 0; }
       nav#layout-nav ul.nav li > a {
-        color: #fff;
+        color: white;
         padding: 0 20px;
         display: inline-block; }
       nav#layout-nav ul.nav li:hover > a {
@@ -1837,10 +1837,10 @@ nav#layout-nav {
         position: absolute;
         top: 70px;
         left: 0;
-        background-color: #3B4E65;
+        background-color: #3b4e65;
         width: 200px;
         text-align: left;
-        border-top: 5px solid #B5ACA0;
+        border-top: 5px solid #b5aca0;
         list-style: none;
         padding-left: 0;
         /*
@@ -1848,7 +1848,7 @@ nav#layout-nav {
         ------------------------------------------------*/ }
         nav#layout-nav ul.nav > li > ul > li {
           line-height: 36px;
-          border-bottom: 2px solid #B5ACA0;
+          border-bottom: 2px solid #b5aca0;
           margin: 0;
           /*
             SUB-LEVEL LINKS HOVER STATE
@@ -1869,10 +1869,10 @@ nav#layout-nav {
 */
 footer#layout-footer {
   height: 180px;
-  background-color: #3B4E65;
+  background-color: #3b4e65;
   font-size: .9em; }
   footer#layout-footer a {
-    color: #fff;
+    color: white;
     display: block; }
     footer#layout-footer a:hover {
       color: #cccccc;
@@ -1880,7 +1880,7 @@ footer#layout-footer {
   footer#layout-footer .back-to-top {
     text-align: center;
     padding: 10px 0;
-    border-bottom: 1px solid #B5ACA0;
+    border-bottom: 1px solid #b5aca0;
     margin-bottom: 5px; }
   footer#layout-footer .links > a {
     padding: 5px 0; }
@@ -2018,13 +2018,13 @@ footer#layout-footer {
 --------------------------------------------------
 */
 #contact .address {
-  color: #3B4E65;
+  color: #3b4e65;
   font-size: 12px;
   font-weight: bold;
   text-align: right; }
 #contact .google-map {
   width: 100%;
-  border: 1px solid #B5ACA0;
+  border: 1px solid #b5aca0;
   margin-top: 94px;
   height: 370px; }
 
@@ -2040,10 +2040,10 @@ footer#layout-footer {
     overflow: hidden;
     width: 180px;
     height: 130px;
-    border: 2px solid #B5ACA0;
+    border: 2px solid #b5aca0;
     margin: 10px; }
     #gallery .gallery-listing a:hover {
-      border-color: #3B4E65; }
+      border-color: #3b4e65; }
     #gallery .gallery-listing a img {
       position: relative;
       top: -15px;
@@ -2055,21 +2055,21 @@ footer#layout-footer {
 --------------------------------------------------
 */
 #news .news-item {
-  border-bottom: 1px dashed #B5ACA0;
+  border-bottom: 1px dashed #b5aca0;
   padding-bottom: 20px;
   margin-bottom: 20px; }
   #news .news-item:last-child {
     border-bottom: 0;
     margin-bottom: 0; }
   #news .news-item header h2 {
-    color: #3B4E65;
+    color: #3b4e65;
     font-size: 1.1em;
     text-transform: uppercase;
     font-weight: bold;
     margin: 0;
     left: 0; }
   #news .news-item header .date {
-    color: #B5ACA0;
+    color: #b5aca0;
     font-weight: normal;
     font-size: .8em; }
   #news .news-item .content {
@@ -3333,11 +3333,11 @@ footer#layout-footer .links {
       left: 105%;
       top: 75px;
       text-align: center;
-      background-color: #3B4E65; }
+      background-color: #3b4e65; }
       nav#layout-nav ul.nav > li {
         display: block;
         position: static;
-        border-bottom: 2px solid #B5ACA0; }
+        border-bottom: 2px solid #b5aca0; }
         nav#layout-nav ul.nav > li:last-child {
           border-bottom: 0; }
         nav#layout-nav ul.nav > li:hover > ul {
@@ -3361,5 +3361,3 @@ footer#layout-footer .links {
 
   .homepage main#layout-content {
     margin-top: 0; } }
-
-/*# sourceMappingURL=application.css.map */
