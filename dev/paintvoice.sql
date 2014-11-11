@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.40, for debian-linux-gnu (i686)
+-- MySQL dump 10.13  Distrib 5.5.22, for debian-linux-gnu (i686)
 --
 -- Host: localhost    Database: tagtown
 -- ------------------------------------------------------
--- Server version	5.5.40-0ubuntu0.14.04.1
+-- Server version	5.5.22-0ubuntu1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -122,7 +122,7 @@ CREATE TABLE `content` (
 
 LOCK TABLES `content` WRITE;
 /*!40000 ALTER TABLE `content` DISABLE KEYS */;
-INSERT INTO `content` VALUES ('contact','<h1>Contact</h1>','page','Yes','Yes','Contact','Contact',5,'0'),('gallery','<h1>Gallery</h1>','page','Yes','Yes','Gallery','Gallery',3,'0'),('homepage','<h1>TagTown</h1><p>Enter some homepage content here.</p>','aside','No','No','','',0,'0'),('news','<h1>News</h1>','page','Yes','Yes','News','News',4,'0');
+INSERT INTO `content` VALUES ('contact','<h1>Contact</h1>','page','Yes','Yes','Contact','Contact',5,'0'),('gallery','<h1>Gallery</h1>','page','Yes','Yes','Gallery','Gallery',3,'0'),('homepage','<h2>Express yourself and broaden your path.</h2>\n<p><span style=\"font-size: 24pt;\">By working with PaintVoice, cities lower their cost to address graffiti and street artists further their career.</span></p>','aside','No','No','','',0,'0'),('news','<h1>News</h1>','page','Yes','Yes','News','News',4,'0');
 /*!40000 ALTER TABLE `content` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -235,7 +235,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'mike@lifthousedesign.com','5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8','Mike','Beattie',NULL,0,'0000-00-00 00:00:00','2014-11-09 14:23:14','2014-11-09 14:23:14',NULL,'administrator'),(2,'tara@lifthousedesign.com','5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8','Tara','Beattie',NULL,0,'0000-00-00 00:00:00','2014-10-06 01:57:47','2014-10-06 01:57:47',NULL,'administrator');
+INSERT INTO `user` VALUES (1,'mike@lifthousedesign.com','5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8','Mike','Beattie',NULL,0,'0000-00-00 00:00:00','2014-11-11 18:59:20','2014-11-11 18:59:20',NULL,'administrator'),(2,'tara@lifthousedesign.com','5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8','Tara','Beattie',NULL,0,'0000-00-00 00:00:00','2014-10-06 01:57:47','2014-10-06 01:57:47',NULL,'administrator');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -248,4 +248,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-11-10  7:59:51
+-- Dump completed on 2014-11-11 19:11:44
