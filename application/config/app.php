@@ -6,7 +6,7 @@
 | The site title and format of how you would like it the title to
 | display.
 */
-$config['app_title']='TagTown';
+$config['app_title']='PaintVoice';
 $config['title_format']='{app_title} | {page_title}';
 
 /*
@@ -27,7 +27,7 @@ $config['default_meta']=array(
     // ),
     array(
         'name'=>'copyright',
-        'content'=>'Copyright '.date('Y').' TagTown, All Rights Reserved',
+        'content'=>'Copyright '.date('Y').' PaintVoice, All Rights Reserved',
     ),
     array(
         'name'=>'author',

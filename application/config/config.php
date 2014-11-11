@@ -14,8 +14,8 @@
 | path to your installation.
 |
 */
-$config['base_url'] = 'http://tagtown.lifthousedesign.com/';
-$config['base_url'] = 'http://tagtown/';
+$config['base_url'] = 'http://paintvoice.lifthousedesign.com/';
+$config['base_url'] = 'http://paintvoice/';
 
 /*
 |--------------------------------------------------------------------------

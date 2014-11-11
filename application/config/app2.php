@@ -2,7 +2,7 @@
 
 /* Set Environment */
 // detect from host (local.domain.com => local, domain.lifthousedesign.com => development, other => production)
-if(strpos($_SERVER['HTTP_HOST'],'tagtown.local') === 0)
+if(strpos($_SERVER['HTTP_HOST'],'paintvoice.local') === 0)
     $config['environment'] = 'local';
 elseif(strpos($_SERVER['HTTP_HOST'],'.lifthousedesign.com') !== false)
     $config['environment'] = 'development';
@@ -22,17 +22,17 @@ $config['databases']=array(
     'local'=>array(
         'username'=>'root',
         'password'=>'root',
-        'database'=>'tagtown',
+        'database'=>'paintvoice',
     ),
     'development'=>array(
-        'username'=>'tagtown',
-        'password'=>'tagtown',
-        'database'=>'tagtown',
+        'username'=>'paintvoice',
+        'password'=>'paintvoice',
+        'database'=>'paintvoice',
     ),
     'production'=>array(
-        'username'=>'tagtown',
-        'password'=>'tagtown',
-        'database'=>'tagtown',
+        'username'=>'paintvoice',
+        'password'=>'paintvoice',
+        'database'=>'paintvoice',
         'db_debug' => false,
     ),
 );
@@ -40,7 +40,7 @@ $config['database'] = array_merge(
     $config['databases']['default'],
     $config['databases'][$config['environment']]
 );
-//var_dump($config['database']);
+
 /* URL / Path Configuration */
 $config['domain'] = $_SERVER['HTTP_HOST'];
 $config['scheme'] = 'http';
@@ -53,10 +53,10 @@ $config['module_path'] = APPPATH.'modules';
 
 /* Metadata/SEO */
 $config['meta'] = array(
-    'site_name' => 'TagTown',
-    'title' => "TagTown",
-    'description' => "TagTown",
-    'keywords' =>'TagTown',
+    'site_name' => 'PaintVoice',
+    'title' => "PaintVoice",
+    'description' => "PaintVoice",
+    'keywords' =>'PaintVoice',
     'url' => $config['full_path'],
     'image' => '/assets/img/logo.png'
 );
@@ -80,8 +80,8 @@ $config['social_media'] = array(
 /* E-mail Notifications */
 $config['contact_recipient'] = '';
 $config['email_notifications']=array(
-    'sender_email'=>'no-reply@tagtown.org',
-    'sender_name'=>'TagTown',
+    'sender_email'=>'no-reply@paintvoice.com',
+    'sender_name'=>'PaintVoice',
     'config'=>array(
         'protocol'=>'sendmail',
         'mailtype'=>'html',
