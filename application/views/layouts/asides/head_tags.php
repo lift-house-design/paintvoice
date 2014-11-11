@@ -36,6 +36,8 @@ echo meta(array_merge(array(
 */
 echo css($css,$asset_path);
 
+echo '<link rel="shortcut icon" href="/assets/img/layout/favicon.png">';
+
 /*
 | -------------------------------------------------------------------
 |  Include javascript.

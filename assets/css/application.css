@@ -1774,14 +1774,16 @@ nav#layout-nav {
   nav#layout-nav .logo {
     position: absolute;
     left: 0;
-    top: 0;
-    line-height: 70px;
+    top: 3px;
     color: #fff;
     font-size: 42px;
     font-family: 'Lobster Two',italic;
     font-style: italic; }
     nav#layout-nav .logo:hover {
       text-decoration: none; }
+    nav#layout-nav .logo img {
+      width: 60px;
+      height: 58px; }
   nav#layout-nav ul.nav {
     position: absolute;
     top: 0;

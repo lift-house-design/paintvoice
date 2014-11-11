@@ -82,8 +82,8 @@ nav#layout-nav {
     .logo {
         position: absolute;
         left: 0;
-        top: 0;
-        line-height: $nav-height;
+        top: 3px;
+        // line-height: $nav-height;
         color: $white;
         font-size: 42px;
         font-family: 'Lobster Two',italic;
@@ -91,6 +91,11 @@ nav#layout-nav {
 
         &:hover {
             text-decoration: none;
+        }
+
+        img {
+            width: 60px;
+            height: 58px;
         }
     }
 
