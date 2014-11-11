@@ -1,6 +1,3 @@
-# Application
-assets/uploads/*
-
 # Junk operating system files
 .DS_Store
 Thumbs.db
