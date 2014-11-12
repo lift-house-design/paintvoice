@@ -148,6 +148,74 @@ class Admin extends App_Controller {
         $this->data['successful_upload']=$successful_upload;
     }
 
+    public function page_image()
+    {
+        // Handle upload
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules(array(
+            array(
+                'field'=>'page',
+                'label'=>'Page',
+                'rules'=>'trim|required',
+            ),
+        ));
+
+        if($this->form_validation->run()!==FALSE)
+        {
+            $action=$this->input->post('action');
+            $page=$this->input->post('page');
+
+            if($action=='Upload New Image')
+            {
+                $this->load->library('upload',array(
+                    'upload_path'=>'assets/img/headers',
+                    'file_name'=>$page.'.jpg',
+                    'overwrite'=>TRUE,
+                    'allowed_types'=>'jpg|jpeg|bmp|gif|png',
+                ));
+
+                // $successful_upload=$this->upload->do_upload('image');
+
+                if(!$this->upload->do_upload('image'))
+                {
+                    $this->form_validation->set_error('There was a problem uploading the image.');
+                }
+            }
+            elseif($action=='Remove Image')
+            {
+                if(asset_exists('img/headers/'.$page.'.jpg'))
+                {
+                    if(!unlink('assets/img/headers/'.$page.'.jpg'))
+                    {
+                        $this->form_validation->set_error('There was a problem removing the image.');
+                    }
+                }
+            }
+        }
+
+        // Get pages
+        $pages=array();
+        foreach($this->content->get_many_by(array('type'=>'page')) as $page)
+        {
+            $pages[ $page['name'] ]=$page['title'];
+        }
+
+        // Get images
+        $images=array();
+        foreach($pages as $k=>$v)
+        {
+            if(asset_exists('img/headers/'.$k.'.jpg'))
+            {
+                $images[]=$k;
+            }
+        }
+
+        // Set page data
+        $this->data['pages']=$pages;
+        $this->data['images']=$images;
+        $this->data['action']=isset($action) ? $action : '';
+    }
+
     public function blog() {
         $this->layout = 'blank';
         $this->authenticate = 'blogger';
