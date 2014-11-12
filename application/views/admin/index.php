@@ -157,5 +157,6 @@
 </div>
 <h3> <a href="/admin/gallery">Manage Gallery</a> </h3>
 <h3> <a href="/admin/homepage_image">Manage Homepage Image</a> </h3>
+<h3> <a href="/admin/page_image">Manage Page Images</a> </h3>
 <div class="spacer20"></div>
 
